@@ -29,14 +29,17 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --sidebar-color: #57c4e5;
+  /* --sidebar-color: #57c4e5; */
+  --sidebar-color: #212738;
   --bg-color: #edf2ef;
   --accent-color1: #d1d646;
   --accent-color2: #f97068;
-  --text-color: #212738;
+  --text-color-dark: #212738;
+  --nav-font-size: 1.5rem;
 }
 
 .layout {
+  font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas: 
@@ -74,11 +77,27 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .icon {
-  height: 40px;
+  height: calc(var(--nav-font-size) * 0.9);
   fill: white;
   display: inline-block;
+  justify-self: center;
 }
 
-a {
-  display: block;
+.link {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  padding-left: 20px;
+  color: white;
+  font-size: var(--nav-font-size);
+}
+
+.link-main {
+  font-size: calc(var(--nav-font-size) + 0.4rem);
+}
+
+.icon-main {
+  height: calc(var(--nav-font-size) + 1rem);
 }
