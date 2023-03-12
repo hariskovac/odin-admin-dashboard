@@ -27,3 +27,45 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
+:root {
+  --sidebar-color: #57c4e5;
+  --bg-color: #edf2ef;
+  --accent-color1: #d1d646;
+  --accent-color2: #f97068;
+  --text-color: #212738;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: 
+    "sidebar header header header header"
+    "sidebar main main main announcements"
+    "sidebar main main main trending";
+}
+
+.sidebar {
+  background-color: var(--sidebar-color);
+  grid-area: sidebar;
+}
+
+.header {
+  background-color: var(--accent-color2);
+  grid-area: header;
+}
+
+.main-content {
+  background-color: var(--accent-color1);
+  grid-area: main;
+}
+
+.announcements {
+  background-color: var(--sidebar-color);
+  grid-area: announcements;
+}
+
+.trending {
+  background-color: var(--sidebar-color);
+  grid-area: trending;
+}
