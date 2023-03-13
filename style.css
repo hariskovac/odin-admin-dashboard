@@ -59,6 +59,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .header {
   background-color: var(--accent-color2);
   grid-area: header;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 15px;
+  height: max-content;
+  align-items: center;
+  padding: 25px;
 }
 
 .main-content {
@@ -101,4 +107,70 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .icon-main {
   height: calc(var(--nav-font-size) + 1rem);
+}
+
+.avatar-small {
+  height: 50px;
+}
+
+.avatar-large {
+  height: 75px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header .icon {
+  fill: black;
+  height: calc(var(--nav-font-size) + 0.3rem);
+}
+
+.search-bar {
+  flex-grow: 1;
+  border-radius: 15px;
+  border: 1px solid var(--sidebar-color);
+  padding: 3px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name {
+  font-size: var(--nav-font-size);
+}
+
+.buttons {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+}
+
+.btn {
+  font-size: calc(var(--nav-font-size) - 0.3rem);
+  background-color: var(--sidebar-color);
+  cursor: pointer;
+  color: white;
+  width: 110px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color2);
+  text-decoration-thickness: 3px;
 }
