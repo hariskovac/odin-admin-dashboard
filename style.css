@@ -42,11 +42,11 @@ p, h1, h2, h3, h4, h5, h6 {
 .layout {
   font-family: 'Roboto', sans-serif;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-areas: 
-    "sidebar header header header header"
-    "sidebar main main main announcements"
-    "sidebar main main main trending";
+    "sidebar header header header header header"
+    "sidebar main main main main announcements"
+    "sidebar main main main main trending";
 }
 
 .sidebar {
