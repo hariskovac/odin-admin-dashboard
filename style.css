@@ -35,6 +35,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --accent-color1: #d1d646;
   --accent-color2: #f97068;
   --text-color-dark: #212738;
+  --text-color-light: #363944;
   --nav-font-size: 1.5rem;
 }
 
@@ -70,6 +71,44 @@ p, h1, h2, h3, h4, h5, h6 {
 .main-content {
   background-color: var(--accent-color1);
   grid-area: main;
+  padding: 20px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--bg-color);
+  height: 250px;
+  border-radius: 5px;
+  border-left: 7px solid var(--accent-color2);
+  box-shadow: 3px 3px 5px gray;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-title {
+  font-size: calc(var(--nav-font-size) * 0.9);
+  font-weight: 500;
+}
+
+.project-description {
+  color: var(--text-color-light);
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.card-icons .icon {
+  fill: black;
 }
 
 .announcements {
