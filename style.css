@@ -82,13 +82,14 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .card {
   background-color: var(--bg-color);
-  height: 250px;
+  min-height: min-content;
   border-radius: 5px;
   border-left: 7px solid var(--accent-color2);
   box-shadow: 3px 3px 5px gray;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
 }
 
