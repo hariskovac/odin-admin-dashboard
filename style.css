@@ -140,6 +140,10 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: var(--nav-font-size);
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .link-main {
   margin-top: 15px;
   font-size: calc(var(--nav-font-size) + 0.4rem);
