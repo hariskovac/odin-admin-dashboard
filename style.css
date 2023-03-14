@@ -74,6 +74,11 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
+.main-content > p {
+  font-size: var(--nav-font-size);
+  margin-bottom: 15px;
+}
+
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -89,7 +94,6 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 10px;
 }
 
@@ -103,8 +107,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .card-icons {
+  margin-top: auto;
   display: flex;
-  justify-content: flex-end;
+  align-self: flex-end;
   gap: 15px;
 }
 
