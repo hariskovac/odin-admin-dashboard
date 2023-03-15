@@ -40,13 +40,15 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .layout {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 300px 4fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
   grid-template-areas: 
-    "sidebar header header header header header"
-    "sidebar main main main main announcements"
-    "sidebar main main main main trending";
+    "sidebar header header"
+    "sidebar main announcements"
+    "sidebar main trending";
 }
 
 .sidebar {
@@ -64,7 +66,6 @@ p, h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 15px;
-  height: max-content;
   align-items: center;
   padding: 25px;
 }
@@ -75,7 +76,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
-.main-content > p {
+.section-title {
   font-size: var(--nav-font-size);
   margin-bottom: 15px;
 }
@@ -92,7 +93,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   border-left: 7px solid var(--accent-color2);
   box-shadow: 3px 3px 5px gray;
-  padding: 10px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -119,13 +120,15 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .announcements {
-  background-color: var(--sidebar-color);
+  background-color: var(--accent-color1);
   grid-area: announcements;
+  padding: 20px;
 }
 
 .trending {
-  background-color: var(--sidebar-color);
+  background-color: var(--accent-color1);
   grid-area: trending;
+  padding: 20px;
 }
 
 .icon {
@@ -224,4 +227,41 @@ p, h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
   text-decoration-color: var(--accent-color2);
   text-decoration-thickness: 3px;
+}
+
+.announcement-wrapper,
+.trending-wrapper {
+  background-color: var(--bg-color);
+  box-shadow: 3px 3px 5px gray;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.trending-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.announcement-title {
+  font-size: calc(var(--nav-font-size) * 0.7);
+}
+
+.announcement-description {
+  color: var(--text-color-light);
+  font-size: calc(var(--nav-font-size) * 0.5);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+hr {
+  margin: 10px 0px;
+  border-top: 1px solid var(--accent-color2);
+}
+
+.trending-wrapper > div {
+  display: flex;
+  gap: 10px;
 }
